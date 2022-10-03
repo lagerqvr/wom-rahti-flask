@@ -6,11 +6,12 @@ load_dotenv()
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def index():
-    ret = { 
-        'msg': 'Flask works on Rahti!', 
-        'env': os.environ.get('ENV_VAR', 'Cannot find variable ENV_VAR') 
+    ret = {
+        'msg': 'GithHub Webhook deployment works!',
+        'env': os.environ.get('ENV_VAR', 'Cannot find variable ENV_VAR')
     }
 
     return ret
